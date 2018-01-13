@@ -26,7 +26,7 @@ Spring Boot
 
 ## Quick Start
 
-### Configuration
+### ELK Configuration
 
 Logstash input configuration file *02-beats-input.conf*.
 ```
