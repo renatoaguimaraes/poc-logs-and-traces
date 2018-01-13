@@ -105,7 +105,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
 </configuration>
 ```
 
-Build and run application with api's on http://localhost:8090.
+Build and run application with api's on http://localhost:8090/.
 
 ```shell
 mvn clean install
@@ -113,13 +113,13 @@ mvn spring-boot:run
 ```
 ### References
 
-[Elastic Search, store and index](https://www.elastic.co/products/elasticsearch)
+[Elastic Search - store and index](https://www.elastic.co/products/elasticsearch)
 
 [Logstash - Collection, transform, filter](https://www.elastic.co/products/logstash)
 
 [Kibana - Data Visualization](https://www.elastic.co/products/kibana)
 
-[Docker Stack ELK](https://github.com/spujadas/elk-docker)
+[Docker ELK Stack](https://github.com/spujadas/elk-docker)
 
 [Logback configuration](https://logback.qos.ch/manual/configuration.html)
 
