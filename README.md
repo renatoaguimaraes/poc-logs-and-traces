@@ -1,5 +1,4 @@
-# poc-logs-and-traces
-POC Logs and Traces
+# Logs and Traces
 
 In a SOA ecosystem we need to have strong monitoring tools, in this challenge you will design a framework to centralize logs and traces.
 
@@ -13,6 +12,8 @@ Tracing.
 - Prepare your system to be able to analyse data and predict failures.
 
 ## Architecture 
+
+The proposal architecture enable the log centralization and correlation of service calls and application trace, the solution is very simple, scalable and flexible.
 
 ELK (Logstash + Eslastic Search + Kibana)
 
