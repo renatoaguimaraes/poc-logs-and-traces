@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+  <include resource="org/springframework/boot/logging/logback/base.xml" />
+
+  <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <destination>localhost:5044</destination>
+    <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+      <providers>
+        <mdc />
+        <context />
+        <version />
+        <logLevel />
+        <loggerName />
+        <pattern>
+          <pattern>
+            {
+            "appName": "elk-logs-and-traces",
+            "appVersion": "1.0"
+            }
+          </pattern>
+        </pattern>
+        <threadName />
+        <stackTrace />
+      </providers>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE" />
+    <appender-ref ref="logstash" />
+  </root>
+
+  <logger name="org.springframework" level="INFO" />
+  <logger name="com.poc.lat" level="INFO" />
+</configuration>
