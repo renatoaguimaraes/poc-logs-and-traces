@@ -114,7 +114,9 @@ mvn spring-boot:run
 ### References
 
 [Elastic Search, store and index](https://www.elastic.co/products/elasticsearch)
+
 [Logstash - Collection, transform, filter](https://www.elastic.co/products/logstash)
+
 [Kibana - Data Visualization](https://www.elastic.co/products/kibana)
 
 [Docker Stack ELK](https://github.com/spujadas/elk-docker)
