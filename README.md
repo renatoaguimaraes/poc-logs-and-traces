@@ -40,6 +40,12 @@ input {
 Logstash output configuration file *30-output.conf*.
 
 ```
+filter {
+  json {
+    source => "message"
+  }
+}
+
 output {
   elasticsearch {
     hosts => ["localhost"]
