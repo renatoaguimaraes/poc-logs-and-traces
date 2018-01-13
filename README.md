@@ -37,7 +37,7 @@ input {
   }  
 }
 ```
-Logstash output configuration file *30-output.conf*.
+Logstash filter and output configuration file *30-output.conf*.
 
 ```
 filter {
