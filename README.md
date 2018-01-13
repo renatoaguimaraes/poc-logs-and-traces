@@ -1,6 +1,10 @@
 # poc-logs-and-traces
 POC Logs and Traces
 
+In a SOA ecosystem we need to have strong monitoring tools, in this challenge you will design a framework to centralize logs and traces.
+
+Logs contains information about events that happened in an application (errors, warnings and meaningful operational events). On another hand, a trace contains information about function and service calls (Service A called endpoint X in Service B successfully and it took T ms).
+
 Requirements:
 - Be able to correlate application logs with application traces.
 - Be able to create a map of service calls (direct and indirect) per user request.
@@ -44,9 +48,28 @@ output {
 }
 ```
 
+Build ELK docker image.
+
+```shell
+cd docker/
+docker build --tag elkpoc .
+```
+
+Run ELK environment.
+```shell
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
+```
+
 ### Application
 
+- /api-a -> /api-b (correlation sample)
+- /api-b
+- /api-c (error sample)
+
+#### Logger configuration
+
 Logger framework configuration *src/main/resources/logback.xml*.
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
@@ -82,15 +105,21 @@ Logger framework configuration *src/main/resources/logback.xml*.
 </configuration>
 ```
 
-Build ELK docker image.
- 
-```shell
-cd docker/
-docker build --tag elkpoc .
-```
+Build and run application with api's on http://localhost:8090.
 
-Run ELK environment.
 ```shell
-docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
+mvn clean install
+mvn spring-boot:run 
 ```
+### References
+
+[Elastic Search, store and index](https://www.elastic.co/products/elasticsearch)
+[Logstash - Collection, transform, filter](https://www.elastic.co/products/logstash)
+[Kibana - Data Visualization](https://www.elastic.co/products/kibana)
+
+[Docker Stack ELK](https://github.com/spujadas/elk-docker)
+
+[Logback configuration](https://logback.qos.ch/manual/configuration.html)
+
+[Spring Boot Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
 
