@@ -31,6 +31,29 @@ Spring Boot
 
 ## Quick Start
 
+Build ELK docker image.
+
+```shell
+cd docker/
+docker build --tag elkpoc .
+```
+
+Run ELK environment.
+```shell
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
+```
+
+Build and run application with api's on http://localhost:8090/.
+
+- /api-a -> /api-b (correlation sample)
+- /api-b
+- /api-c (error sample)
+
+```shell
+mvn clean install
+mvn spring-boot:run 
+```
+
 ### ELK Configuration
 
 Logstash input configuration file *02-beats-input.conf*.
@@ -59,25 +82,7 @@ output {
 }
 ```
 
-Build ELK docker image.
-
-```shell
-cd docker/
-docker build --tag elkpoc .
-```
-
-Run ELK environment.
-```shell
-docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
-```
-
-### Application
-
-- /api-a -> /api-b (correlation sample)
-- /api-b
-- /api-c (error sample)
-
-#### Logger configuration
+### Application Configuration
 
 Logger framework configuration *src/main/resources/logback.xml*.
 
@@ -114,13 +119,6 @@ Logger framework configuration *src/main/resources/logback.xml*.
   <logger name="org.springframework" level="INFO" />
   <logger name="com.poc.lat" level="INFO" />
 </configuration>
-```
-
-Build and run application with api's on http://localhost:8090/.
-
-```shell
-mvn clean install
-mvn spring-boot:run 
 ```
 
 ### POC Results
