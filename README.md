@@ -65,9 +65,16 @@ docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
 
 Build and run application with api's on http://localhost:8090.
 
+Using Maven:
+
 ```shell
 mvn clean install
 mvn spring-boot:run 
+```
+Or using Gradle:
+
+```
+./gradlew bootRun
 ```
 
 API's
