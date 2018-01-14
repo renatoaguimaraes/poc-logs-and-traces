@@ -159,5 +159,7 @@ The proof of concept have success, the solution solved all the requirements.
 
 [Logback configuration](https://logback.qos.ch/manual/configuration.html)
 
+[Logstash Logback Encoder]https://github.com/logstash/logstash-logback-encoder
+
 [Spring Boot Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
 
