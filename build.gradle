@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+        classpath("net.logstash.logback:logstash-logback-encoder:4.11")
+	    classpath("ch.qos.logback:logback-core:1.2.3")
+	    classpath("ch.qos.logback:logback-classic:1.2.3")
+	    classpath("ch.qos.logback:logback-access:1.2.3")
+    }
+}
+
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "org.springframework.boot"
+
+jar {
+    baseName = "poc-logs-and-traces"
+    version =  "1.0.0"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")    
+    compile("net.logstash.logback:logstash-logback-encoder:4.11")
+    testCompile("junit:junit")
+}
