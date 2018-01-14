@@ -19,7 +19,7 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ![Component Diagram](component.png)
 
-#### ELK (Logstash + Eslastic Search + Kibana)
+### ELK (Logstash + Eslastic Search + Kibana)
 
 **Store and Index**
 
