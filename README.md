@@ -19,15 +19,15 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ### Components
 
-![Component Diagram](component.png)
+![Component Diagram](img/component.png)
 
 ### Log and Trace
 
-![Log and Trace](log-and-trace-seq.png)
+![Log and Trace](img/log-and-trace-seq.png)
 
 ### Store, Index and Search
 
-![Store, Index and Search](store-index-search-seq.png)
+![Store, Index and Search](img/store-index-search-seq.png)
 
 ### ELK (Logstash + Eslastic Search + Kibana)
 
@@ -165,7 +165,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
 
 The proof of concept have success, the solution solved all the requirements. 
 
-![Component Diagram](results.png)
+![Component Diagram](img/results.png)
 
 ## References  
 
