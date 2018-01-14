@@ -63,17 +63,19 @@ Run ELK environment.
 docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
 ```
 
-Build and run application with api's on http://localhost:8090/.
-
-- /api-a -> /api-b (correlation sample)
-- /api-b
-- /api-c -> /api-d (correlation sample)
-- /api-d (error sample)
+Build and run application with api's on http://localhost:8090.
 
 ```shell
 mvn clean install
 mvn spring-boot:run 
 ```
+
+API's
+
+- /api-a -> /api-b (correlation sample)
+- /api-b
+- /api-c -> /api-d (correlation sample)
+- /api-d (error sample)
 
 ### ELK Configuration
 
