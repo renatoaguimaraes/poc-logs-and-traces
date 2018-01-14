@@ -35,11 +35,11 @@ Kibana is an open source data visualization plugin for Elasticsearch. It provide
 
 **Http Filter**
 
-Simple http filter used to create, if not exists, x-correlation-id of serives interactions. Responsible to create MDC - Mapped Diagnostic Context.
+Simple http filter used to create, if not exists, x-correlation-id of serives interactions. Responsible to configure MDC - Mapped Diagnostic Context.
 
 **Http Client**
 
-Simple Interceptor used to propagate x-correlation-id along of services call by http client (Spring Rest Template).
+Simple Interceptor used to get x-correlation-id from MDC and propagate along of services call by http client (Spring Rest Template).
 
 **Slf4j and Logback**
 
