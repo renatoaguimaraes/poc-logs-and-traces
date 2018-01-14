@@ -39,15 +39,15 @@ Simple http filter used to create, if not exists, x-correlation-id of serives in
 
 **Http Client**
 
-Simple Interceptor used to propagate x-correlation-id along of services call.
+Simple Interceptor used to propagate x-correlation-id along of services call by http client (Spring Rest Template).
 
 **Slf4j and Logback**
 
-Standard logger framework.
+Standard logger frameworks.
 
 **Spring Boot** 
 
-Implementation of REST api salmples.
+Implementation of REST api samples.
 
 ## Quick Start
 
