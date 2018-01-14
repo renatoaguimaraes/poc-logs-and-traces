@@ -189,7 +189,9 @@ Logger framework configuration *src/main/resources/logback.xml*.
 
 The solution implements all requirements with success and the proof of concept demonstrates the architecture in action.  
 
-![Component Diagram](img/results.png)
+![Result Log](img/results.png)
+
+![Result Trace](img/result-trace.png)
 
 ## References  
 
