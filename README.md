@@ -17,9 +17,15 @@ Tracing.
 
 The proposal architecture enable the log centralization and correlation of service calls and application tracing, the solution is very simple, scalable and flexible.
 
+### Components
+
 ![Component Diagram](component.png)
 
+### Log and Trace
+
 ![Log and Trace](log-and-trace-seq.png)
+
+### Store, Index and Search
 
 ![Store, Index and Search](store-index-search-seq.png)
 
