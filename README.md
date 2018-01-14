@@ -19,15 +19,27 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ![Component Diagram](component.png)
 
-ELK (Logstash + Eslastic Search + Kibana)
+#### ELK (Logstash + Eslastic Search + Kibana)
 
-Http Filter
+**Store and Index**
 
-Http Client
+Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
-Slf4j
+**Collector**
 
-Spring Boot 
+Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.” (Ours is Elasticsearch, naturally.)
+
+**Data Visualization and Monitoring**
+
+Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.
+
+### Http Filter
+
+### Http Client
+
+### Slf4j
+
+### Spring Boot 
 
 ## Quick Start
 
