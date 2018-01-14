@@ -142,13 +142,13 @@ Logger framework configuration *src/main/resources/logback.xml*.
 </configuration>
 ```
 
-### POC Results
+## POC Results
 
 The proof of concept have success, the solution solved all the requirements. 
 
 ![Component Diagram](results.png)
 
-### References  
+## References  
 
 [Elastic Search - store and index](https://www.elastic.co/products/elasticsearch)
 
