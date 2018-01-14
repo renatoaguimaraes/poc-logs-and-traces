@@ -15,7 +15,7 @@ Tracing.
 
 ## The Architecture 
 
-The proposal architecture enable the log centralization and correlation of service calls and application trace, the solution is very simple, scalable and flexible.
+The proposal architecture enable the log centralization and correlation of service calls and application tracing, the solution is very simple, scalable and flexible.
 
 ![Component Diagram](component.png)
 
