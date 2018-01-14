@@ -67,7 +67,8 @@ Build and run application with api's on http://localhost:8090/.
 
 - /api-a -> /api-b (correlation sample)
 - /api-b
-- /api-c (error sample)
+- /api-c -> /api-d 
+- /api-d (error sample)
 
 ```shell
 mvn clean install
