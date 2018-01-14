@@ -67,7 +67,7 @@ Build and run application with api's on http://localhost:8090/.
 
 - /api-a -> /api-b (correlation sample)
 - /api-b
-- /api-c -> /api-d 
+- /api-c -> /api-d (correlation sample)
 - /api-d (error sample)
 
 ```shell
