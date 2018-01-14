@@ -69,11 +69,17 @@ docker build --tag elkpoc .
 ```
 
 Run ELK environment.
+
 ```shell
 docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
 ```
+Kibana - http://localhost:5601/app/kibana
 
-Build and run application with api's on http://localhost:8090.
+Elastic Search - http://localhost:9200 
+
+Logstash - localhost:5044
+
+Build and run spring boot rest api.
 
 Using Maven:
 
@@ -86,6 +92,8 @@ Or using Gradle:
 ```
 ./gradlew bootRun
 ```
+
+Running on http://localhost:8090
 
 API's
 
