@@ -49,6 +49,10 @@ Standard logger frameworks.
 
 Implementation of REST api samples.
 
+![Log and Trace](log-and-trace-seq.png)
+
+![Store, Index and Search](store-index-search-seq.png)
+
 ## Quick Start
 
 Build ELK docker image.
