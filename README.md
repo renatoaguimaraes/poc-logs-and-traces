@@ -61,14 +61,14 @@ Implementation of REST api samples.
 
 ## Quick Start
 
-Build ELK docker image.
+**Build ELK docker image.**
 
 ```shell
 cd docker/
 docker build --tag elkpoc .
 ```
 
-Run ELK environment.
+**Run ELK environment.**
 
 ```shell
 docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk elkpoc
@@ -79,7 +79,7 @@ Elastic Search - http://localhost:9200
 
 Logstash - localhost:5044
 
-Build and run spring boot rest api.
+**Build and run spring boot rest api's.**
 
 Using Maven:
 
