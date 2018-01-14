@@ -25,15 +25,15 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ![Log and Trace](img/log-and-trace-seq.png)
 
-### Store, Index and Search
+### Storage, Index and Search
 
-![Store, Index and Search](img/store-index-search-seq.png)
+![Storage, Index and Search](img/store-index-search-seq.png)
 
 ### ELK (Logstash + Eslastic Search + Kibana)
 
-Collector, Store and Index, Data Visualization.
+Collector, Storage and Index, Data Visualization.
 
-**Store and Index**
+**Storage and Index**
 
 Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
@@ -51,11 +51,11 @@ Simple http filter *(javax.servlet.Filter)* used to create, if not exists, x-cor
 
 **Http Client**
 
-Simple Interceptor used to get x-correlation-id from MDC and propagate along of services call by http client (Spring Rest Template).
+Simple Interceptor is used to get x-correlation-id from MDC and propagate along of services calls by http client (Spring Rest Template).
 
 **Slf4j and Logback**
 
-Standard logger frameworks. Send json event records via tcp to collector.
+Standard logger framework. Convert log event records in JSON format and send via TCP to the collector.
 
 **Spring Boot** 
 
@@ -187,7 +187,7 @@ The proof of concept have success, the solution solved all the requirements.
 
 ## References  
 
-[Elastic Search - Store and Index](https://www.elastic.co/products/elasticsearch)
+[Elastic Search - Storage and Index](https://www.elastic.co/products/elasticsearch)
 
 [Logstash - Ingestion, Transform and Filter](https://www.elastic.co/products/logstash)
 
