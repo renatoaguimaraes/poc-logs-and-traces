@@ -19,6 +19,10 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ![Component Diagram](component.png)
 
+![Log and Trace](log-and-trace-seq.png)
+
+![Store, Index and Search](store-index-search-seq.png)
+
 ### ELK (Logstash + Eslastic Search + Kibana)
 
 **Store and Index**
@@ -48,10 +52,6 @@ Standard logger frameworks.
 **Spring Boot** 
 
 Implementation of REST api samples.
-
-![Log and Trace](log-and-trace-seq.png)
-
-![Store, Index and Search](store-index-search-seq.png)
 
 ## Quick Start
 
