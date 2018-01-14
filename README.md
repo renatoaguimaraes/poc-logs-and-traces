@@ -120,6 +120,13 @@ Build and run application with api's on http://localhost:8090/.
 mvn clean install
 mvn spring-boot:run 
 ```
+
+### POC Results
+
+The proof of concepts have success, the implementation is very simple and transparent to development team use in applications and very useful to the operations team.
+
+![Component Diagram](results.png)
+
 ### References
 
 [Elastic Search - store and index](https://www.elastic.co/products/elasticsearch)
