@@ -15,17 +15,23 @@ Tracing.
 
 ## Architecture 
 
-The proposal architecture enable the log centralization and correlation of service calls and application tracing, the solution is very simple, scalable and flexible.
+The proposal architecture enables the log centralization and correlation of service calls and tracing, the solution is very powerful, scalable and flexible.
 
 ### Components
+
+The component diagram shows the structural relationships between the main components of the architecture.
 
 ![Component Diagram](img/component.png)
 
 ### Log and Trace
 
+The diagram below shows the interactions between components in the sequential order of user request life cycle. 
+
 ![Log and Trace](img/log-and-trace-seq.png)
 
 ### Storage, Index and Search
+
+The diagram below shows the interactions between components in the sequential order of log, storage, index and search event records. 
 
 ![Storage, Index and Search](img/store-index-search-seq.png)
 
