@@ -54,13 +54,13 @@ public class LogsAndTracesRequestFilter implements Filter
 
             endRequest(start);
 
-            LOG.info("Success %", uri);
+            LOG.info("Success " + uri);
         }
         catch (Exception e)
         {
             endRequest(start);
 
-            LOG.error("Error %", uri);
+            LOG.error("Error ", e);
         }
         finally
         {
