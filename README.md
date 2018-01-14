@@ -187,7 +187,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
 
 ## POC Results
 
-The proof of concept have success, the solution solved all the requirements. 
+The solution implements all requirements with success and the proof of concept demonstrates the architecture in action.  
 
 ![Component Diagram](img/results.png)
 
