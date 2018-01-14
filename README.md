@@ -13,7 +13,7 @@ Requirements:
 Tracing.
 - Prepare your system to be able to analyse data and predict failures.
 
-## The Architecture 
+## Architecture 
 
 The proposal architecture enable the log centralization and correlation of service calls and application tracing, the solution is very simple, scalable and flexible.
 
