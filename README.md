@@ -53,7 +53,7 @@ Simple Interceptor used to get x-correlation-id from MDC and propagate along of 
 
 **Slf4j and Logback**
 
-Standard logger frameworks.
+Standard logger frameworks. Send json event records via tcp to collector.
 
 **Spring Boot** 
 
