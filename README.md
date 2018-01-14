@@ -2,7 +2,7 @@
 
 ## The Challenger
 
-In a SOA ecosystem we need to have strong monitoring tools, in this challenge you will design a framework to centralize logs and traces.
+In a SOA ecosystem we need to have strong monitoring tools, the challenge is design a solution to centralize logs and traces.
 
 Logs contains information about events that happened in an application (errors, warnings and meaningful operational events). On another hand, a trace contains information about function and service calls (Service A called endpoint X in Service B successfully and it took T ms).
 
