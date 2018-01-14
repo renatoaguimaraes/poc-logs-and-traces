@@ -33,19 +33,19 @@ Logstash is an open source, server-side data processing pipeline that ingests da
 
 Kibana is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.
 
-### Http Filter
+**Http Filter**
 
 Simple http filter used to create, if not exists, x-correlation-id of serives interation. Responsible to create MDC - Mapped Diagnostic Context.
 
-### Http Client
+**Http Client**
 
 Simple Interceptor used to propagate x-correlation-id along of services call.
 
-### Slf4j
+**Slf4j**
 
 Standard logger framework.
 
-### Spring Boot 
+**Spring Boot** 
 
 Implementation of REST api salmples.
 
