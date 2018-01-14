@@ -39,7 +39,7 @@ Simple http filter used to create, if not exists, x-correlation-id of serives in
 
 ### Http Client
 
-Simple Interceptor used to propagate x-correlation-id alongo of services call.
+Simple Interceptor used to propagate x-correlation-id along of services call.
 
 ### Slf4j
 
