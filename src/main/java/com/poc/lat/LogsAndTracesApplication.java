@@ -35,9 +35,17 @@ public class LogsAndTracesApplication
     }
 
     @RequestMapping(value = "/api-c")
-    public void apic()
+    public String apic()
     {
-        throw new RuntimeException("Runtime error!");
+        restTemplate.getForEntity("http://localhost:8090/api-d", String.class);
+
+        return "API C";
+    }
+
+    @RequestMapping(value = "/api-d")
+    public void apid()
+    {
+        throw new RuntimeException("Runtime error API D!");
     }
 
     @Bean
