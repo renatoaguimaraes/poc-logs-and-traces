@@ -41,7 +41,7 @@ Simple http filter used to create, if not exists, x-correlation-id of serives in
 
 Simple Interceptor used to propagate x-correlation-id along of services call.
 
-**Slf4j**
+**Slf4j and Logback**
 
 Standard logger framework.
 
