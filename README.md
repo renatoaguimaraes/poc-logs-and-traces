@@ -150,15 +150,15 @@ The proof of concept have success, the solution solved all the requirements.
 
 ## References  
 
-[Elastic Search - store and index](https://www.elastic.co/products/elasticsearch)
+[Elastic Search - Store and Index](https://www.elastic.co/products/elasticsearch)
 
-[Logstash - Collection, transform, filter](https://www.elastic.co/products/logstash)
+[Logstash - Ingestion, Transform and Filter](https://www.elastic.co/products/logstash)
 
 [Kibana - Data Visualization](https://www.elastic.co/products/kibana)
 
 [Docker ELK Stack](https://github.com/spujadas/elk-docker)
 
-[Logback configuration](https://logback.qos.ch/manual/configuration.html)
+[Logback Configuration](https://logback.qos.ch/manual/configuration.html)
 
 [Logstash Logback Encoder](https://github.com/logstash/logstash-logback-encoder)
 
