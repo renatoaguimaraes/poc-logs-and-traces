@@ -15,6 +15,8 @@ Tracing.
 
 The proposal architecture enable the log centralization and correlation of service calls and application trace, the solution is very simple, scalable and flexible.
 
+![Component Diagram](component.png)
+
 ELK (Logstash + Eslastic Search + Kibana)
 
 Http Filter
