@@ -31,6 +31,8 @@ The proposal architecture enable the log centralization and correlation of servi
 
 ### ELK (Logstash + Eslastic Search + Kibana)
 
+Collector, Store and Index, Data Visualization.
+
 **Store and Index**
 
 Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
