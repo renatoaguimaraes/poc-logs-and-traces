@@ -1,5 +1,7 @@
 # Logs and Traces
 
+## The Challenger
+
 In a SOA ecosystem we need to have strong monitoring tools, in this challenge you will design a framework to centralize logs and traces.
 
 Logs contains information about events that happened in an application (errors, warnings and meaningful operational events). On another hand, a trace contains information about function and service calls (Service A called endpoint X in Service B successfully and it took T ms).
@@ -11,7 +13,7 @@ Requirements:
 Tracing.
 - Prepare your system to be able to analyse data and predict failures.
 
-## Architecture 
+## The Architecture 
 
 The proposal architecture enable the log centralization and correlation of service calls and application trace, the solution is very simple, scalable and flexible.
 
@@ -123,11 +125,11 @@ mvn spring-boot:run
 
 ### POC Results
 
-The proof of concepts have success, the implementation is very simple and transparent to development team use in applications and very useful to the operations team.
+The proof of concept have success, the solution solved all the requirements. 
 
 ![Component Diagram](results.png)
 
-### References
+### References  
 
 [Elastic Search - store and index](https://www.elastic.co/products/elasticsearch)
 
