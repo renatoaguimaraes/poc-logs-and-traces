@@ -69,7 +69,7 @@ Standard logger framework. Convert log event records in JSON format and send via
 
 Implementation of REST api samples.
 
-___
+---
 
 ## Proof of Concept
 
