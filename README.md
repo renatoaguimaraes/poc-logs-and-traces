@@ -23,13 +23,13 @@ The component diagram shows the structural relationships between the main compon
 
 ![Component Diagram](img/component.png)
 
-### Log and Trace
+#### Log and Trace Sequence
 
 The diagram below shows the interactions between components in the sequential order of user request life cycle. 
 
 ![Log and Trace](img/log-and-trace-seq.png)
 
-### Storage, Index and Search
+#### Storage, Index and Search Sequence
 
 The diagram below shows the interactions between components in the sequential order of log, storage, index and search event records. 
 
@@ -68,6 +68,8 @@ Standard logger framework. Convert log event records in JSON format and send via
 **Spring Boot** 
 
 Implementation of REST api samples.
+
+___
 
 ## Proof of Concept
 
@@ -187,7 +189,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
 </configuration>
 ```
 
-## POC Results
+## Results
 
 The solution implements all requirements with success and the proof of concept demonstrates the architecture in action.  
 
