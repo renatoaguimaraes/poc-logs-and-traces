@@ -158,7 +158,8 @@ Logger framework configuration *src/main/resources/logback.xml*.
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
   <include resource="org/springframework/boot/logging/logback/base.xml" />
-  <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+  <property resource="application.properties" />  
+  <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
     <destination>localhost:5044</destination>
     <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
       <providers>
@@ -170,8 +171,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
         <pattern>
           <pattern>
             {
-            "appName": "elk-logs-and-traces",
-            "appVersion": "1.0"
+            "appName": "elk-${spring.application.name}"
             }
           </pattern>
         </pattern>
@@ -182,7 +182,7 @@ Logger framework configuration *src/main/resources/logback.xml*.
   </appender>
   <root level="INFO">
     <appender-ref ref="CONSOLE" />
-    <appender-ref ref="logstash" />
+    <appender-ref ref="LOGSTASH" />
   </root>
   <logger name="org.springframework" level="INFO" />
   <logger name="com.poc.lat" level="INFO" />
