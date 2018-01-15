@@ -35,7 +35,9 @@ The diagram below shows the interactions between components in the sequential or
 
 ![Storage, Index and Search](img/store-index-search-seq.png)
 
-### ELK (Logstash + Eslastic Search + Kibana)
+### Components and Technologies
+
+#### ELK (Logstash + Eslastic Search + Kibana)
 
 Collector, Storage and Index, Data Visualization.
 
@@ -67,7 +69,7 @@ Standard logger framework. Convert log event records in JSON format and send via
 
 Implementation of REST api samples.
 
-## Quick Start
+## Proof of Concept
 
 **Build ELK docker image.**
 
