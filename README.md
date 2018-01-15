@@ -133,7 +133,7 @@ output {
   elasticsearch {
     hosts => ["localhost"]
     manage_template => false
-    index => "elk-%{+YYYY.MM.dd}%"
+    index => "elk-%{+YYYY.MM.dd}"
   }
 }
 ```
