@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
   <include resource="org/springframework/boot/logging/logback/base.xml" />
+  <property resource="application.properties" />
   <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
     <destination>localhost:5044</destination>
     <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
@@ -10,11 +11,11 @@
         <version />
         <logLevel />
         <loggerName />
+        <message />
         <pattern>
           <pattern>
             {
-            "appName": "elk-logs-and-traces",
-            "appVersion": "1.0"
+            "appName": "elk-%X{req.requestURI}"
             }
           </pattern>
         </pattern>

@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,7 @@ import ch.qos.logback.classic.ClassicConstants;
 @Component
 public class LogsAndTracesRequestFilter implements Filter
 {
+
     private static final Logger LOG = LoggerFactory.getLogger(LogsAndTracesRequestFilter.class);
 
     private static final String REQ_TIME = "req.time";
@@ -30,6 +32,7 @@ public class LogsAndTracesRequestFilter implements Filter
     private static final String HEADER_X_FORWARDED_FOR = "X-Forwarded-For";
     private static final String HEADER_USER_AGENT = "User-Agent";
     private static final String HEADER_X_CORRELATION_ID = "x-correlation-id";
+    private static final String HEADER_RES_STATUS = "res.status";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException
@@ -40,32 +43,42 @@ public class LogsAndTracesRequestFilter implements Filter
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
     {
         Date start = new Date();
-        String uri = null;
+
+        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+
+        HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+
+        String uri = httpServletRequest.getRequestURI();
 
         try
         {
-            HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-
-            uri = httpServletRequest.getRequestURI();
-
             populateMDC(httpServletRequest);
 
             chain.doFilter(request, response);
 
-            endRequest(start);
+            populateMDC(httpServletResponse, start);
 
             LOG.info("Success " + uri);
         }
         catch (Exception e)
         {
-            endRequest(start);
+            populateMDC(httpServletResponse, start);
 
-            LOG.error("Error ", e);
+            LOG.error("Error " + uri, e);
         }
         finally
         {
             MDC.clear();
         }
+    }
+
+    protected void populateMDC(HttpServletResponse httpServletResponse, Date start)
+    {
+        MDC.put(HEADER_RES_STATUS, String.valueOf(httpServletResponse.getStatus()));
+
+        Date end = new Date();
+
+        MDC.put(REQ_TIME, String.valueOf(end.getTime() - start.getTime()));
     }
 
     protected void populateMDC(HttpServletRequest httpServletRequest)
@@ -95,13 +108,6 @@ public class LogsAndTracesRequestFilter implements Filter
         MDC.put(ClassicConstants.REQUEST_USER_AGENT_MDC_KEY, httpServletRequest.getHeader(HEADER_USER_AGENT));
 
         MDC.put(ClassicConstants.REQUEST_X_FORWARDED_FOR, httpServletRequest.getHeader(HEADER_X_FORWARDED_FOR));
-    }
-
-    protected void endRequest(Date start)
-    {
-        Date end = new Date();
-
-        MDC.put(REQ_TIME, String.valueOf(end.getTime() - start.getTime()));
     }
 
     @Override
