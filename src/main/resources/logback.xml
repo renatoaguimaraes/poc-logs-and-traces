@@ -15,7 +15,7 @@
         <pattern>
           <pattern>
             {
-            "appName": "elk-%X{req.requestURI}"
+            "appName": "elk-${spring.application.name}"
             }
           </pattern>
         </pattern>
