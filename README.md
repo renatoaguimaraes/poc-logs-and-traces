@@ -7,11 +7,10 @@ In a SOA ecosystem we need to have strong monitoring tools, the challenge is des
 Logs contains information about events that happened in an application (errors, warnings and meaningful operational events). On another hand, a trace contains information about function and service calls (Service A called endpoint X in Service B successfully and it took T ms).
 
 Requirements:
-- Be able to correlate application logs with application traces.
-- Be able to create a map of service calls (direct and indirect) per user request.
-- Be able to add dashboards to centralize and cross information upon Logs and
-Tracing.
-- Prepare your system to be able to analyse data and predict failures.
+- Correlate application logs with application traces.
+- Map of service calls (direct and indirect) per user request.
+- Dashboards to centralize and cross information upon Logs and Tracing.
+- Analyse data and predict failures.
 
 ## Architecture 
 
