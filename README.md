@@ -1,6 +1,6 @@
 # Logs and Traces
 
-## The Challenger
+## The Challenge
 
 In a SOA ecosystem we need to have strong monitoring tools, the challenge is design a solution to centralize logs and traces.
 
