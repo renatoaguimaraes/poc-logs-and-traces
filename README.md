@@ -46,7 +46,11 @@ Elasticsearch is a distributed, RESTful search and analytics engine capable of s
 
 **Collector**
 
-Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite “stash.”
+Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to “stash.”
+
+- Horizontal scalability, high availability, and variable load handling
+- Message durability with at-least-once delivery guarantees
+- End-to-end secure transport with authentication and wire encryption
 
 **Data Visualization and Monitoring**
 
